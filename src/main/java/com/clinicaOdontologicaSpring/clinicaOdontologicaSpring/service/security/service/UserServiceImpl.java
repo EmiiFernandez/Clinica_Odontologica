@@ -3,7 +3,6 @@ package com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.service.security
 import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.User;
 import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.repository.IUserRepository;
 import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.service.security.IUserService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
