@@ -21,7 +21,7 @@ Es importante realizar el manejo de excepciones logueando cualquier excepción q
 ## Tecnologías utilizadas 
   - Java 20
   - Maven
-  - Spring Boot 
+  - Spring Boot / Security
   - H2 DataBase 
   - HTML 
   - CSS 
