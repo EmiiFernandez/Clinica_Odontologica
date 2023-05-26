@@ -42,7 +42,6 @@ Es importante realizar el manejo de excepciones logueando cualquier excepción q
       * Inicio de sesión como user 
         - Username: user 
         - Password: user
-   5. Una vez logueado se podra acceder a los funcionalidades del sistema, correspondiente al rol seleccionado
+   5. Una vez logueado se podra acceder a los funcionalidades del sistema, según el rol seleccionado
 
-## Mockup
-![Mockup](src/main/resources/static/img/macbook-pro-mockup-with-a-white-iphone-6-in-front-view-a11923.png)
+## Mockup ![Mockup](src/main/resources/static/img/macbook-pro-mockup-with-a-white-iphone-6-in-front-view-a11923.png)
