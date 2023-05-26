@@ -46,5 +46,5 @@ Es importante realizar el manejo de excepciones logueando cualquier excepción q
 
 ## Mockup 
 <a href="#">
-  <img align="center" width = 800px src="https://github.com/EmiiFernandez/Clinica_Odontologica/blob/main/src/main/resources/static/img/macbook-pro-mockup-with-a-white-iphone-6-in-front-view-a11923.png?raw=true"
+  <img align="center" width = 800px src="https://github.com/EmiiFernandez/Clinica_Odontologica/blob/main/src/main/resources/static/img/Mockup%20web.png?raw=true"
 </a>
