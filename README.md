@@ -42,3 +42,4 @@ Es importante realizar el manejo de excepciones logueando cualquier excepción q
       * Inicio de sesión como user 
         - Username: user 
         - Password: user
+   5. Una vez logueado se podra acceder a los funcionalidades del sistema, correspondiente al rol seleccionado
