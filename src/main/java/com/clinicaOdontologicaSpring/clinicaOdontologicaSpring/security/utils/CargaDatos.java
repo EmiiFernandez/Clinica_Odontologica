@@ -1,11 +1,8 @@
 package com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.security.utils;
-
-import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.login.Role;
-import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.login.User;
-import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.login.enums.ERole;
-import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.repository.security.IRoleRepository;
-import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.repository.security.IUserRepository;
-import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.service.security.IRoleService;
+/*
+import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.User;
+import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.enums.ERole;
+import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.repository.IUserRepository;
 import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.service.security.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -57,3 +54,4 @@ public class CargaDatos implements ApplicationRunner {
 
     }
 }
+*/

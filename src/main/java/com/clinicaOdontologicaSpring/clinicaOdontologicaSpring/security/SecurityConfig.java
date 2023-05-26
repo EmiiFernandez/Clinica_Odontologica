@@ -24,26 +24,35 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Autowired
-    private UserServiceImpl usuarioService;
-    @Autowired
+    private UserServiceImpl userService;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @Autowired
-    private JwtRequestFilter jwtRequestFilter;
+    public SecurityConfig(UserServiceImpl userService, BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.userService = userService;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable().headers().frameOptions().disable().and()
+        http.headers().frameOptions().disable();
+        http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers(toH2Console()).permitAll()
+                .requestMatchers(toH2Console()).hasRole("MODERATOR")
                 .requestMatchers("/css/**", "img/**", "/js/**").permitAll()
-                .requestMatchers("/login.html", "/index.html").permitAll()
-                .requestMatchers("/odontologoList.html", "/pacienteList.html","/turnoList.html","/odontologo/listar", "/paciente/listar", "/turno/listar").hasAnyRole("ROLE_USER","ROLE_ADMIN", "ROLE_MODERATOR")
-                .requestMatchers("/odontologo/**", "/paciente/**", "/turno/**", "/odontologoAlta.html", "/pacienteAlta.html", "/turnoAlta.html").hasAnyRole("ROLE_ADMIN", "ROLE_MODERATOR")
+                .requestMatchers("/login.html").permitAll()
+                .requestMatchers("/odontologoList.html", "/pacienteList.html","/turnoList.html","/odontologo/listar", "/paciente/listar", "/turno/listar", "/index.html").hasAnyRole("USER","ADMIN", "MODERATOR")
+                .requestMatchers("/odontologo/**", "/paciente/**", "/turno/**", "/odontologoAlta.html", "/pacienteAlta.html", "/turnoAlta.html").hasAnyRole("ADMIN", "MODERATOR")
                 .anyRequest()
-                .authenticated().and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+                .authenticated()
+                .and()
+                .formLogin()
+                .and()
+                .logout()
+                .and()
+                .exceptionHandling().accessDeniedPage("/accesoDenegado.html");
+              //  .and()
+           //     .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         return http.build();
     }
 
@@ -56,7 +65,7 @@ public class SecurityConfig {
     public DaoAuthenticationProvider daoAuthenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(bCryptPasswordEncoder);
-        provider.setUserDetailsService(usuarioService);
+        provider.setUserDetailsService(userService);
 
         return provider;
     }

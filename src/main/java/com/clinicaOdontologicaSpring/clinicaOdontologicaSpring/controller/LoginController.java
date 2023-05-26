@@ -1,6 +1,6 @@
 package com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.controller;
-
-import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.login.User;
+/*
+import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.entity.User;
 import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.security.AuthenticationResponse;
 import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.security.utils.JwtUtil;
 import com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.service.security.IUserService;
@@ -30,7 +30,7 @@ public class LoginController {
     @PostMapping()
     public ResponseEntity<?> authenticateUser(@RequestParam String username, @RequestParam String password) {
 
-        Optional<User> user = userService.findByUsername(username);
+        Optional<User> user = userService.loadUserByUsername(username);
 
         if (!user.isPresent()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
@@ -57,3 +57,4 @@ public class LoginController {
         }
     }
 }
+*/

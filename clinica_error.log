@@ -242,3 +242,7 @@ delete from odontologos where id=? [23503-214]]
 delete from odontologos where id=? [23503-214]]
 [2023-05-02 19:31:51] [ ERROR] [GlobalExceptionHandler:23] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(3 AS BIGINT))"; SQL statement:
 delete from odontologos where id=? [23503-214]]
+[2023-05-26 01:21:15] [ ERROR] [GlobalExceptionHandler:23] com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.exeptions.ResourceNotFoundException: No hay turnos cargados
+[2023-05-26 01:21:37] [ ERROR] [GlobalExceptionHandler:23] com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.exeptions.ResourceNotFoundException: No hay turnos cargados
+[2023-05-26 01:21:56] [ ERROR] [GlobalExceptionHandler:23] com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.exeptions.ResourceNotFoundException: No hay turnos cargados
+[2023-05-26 01:22:02] [ ERROR] [GlobalExceptionHandler:23] com.clinicaOdontologicaSpring.clinicaOdontologicaSpring.exeptions.ResourceNotFoundException: No hay turnos cargados
