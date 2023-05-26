@@ -45,5 +45,4 @@ Es importante realizar el manejo de excepciones logueando cualquier excepción q
    5. Una vez logueado se podra acceder a los funcionalidades del sistema, correspondiente al rol seleccionado
 
 ### Mockup
-
 ![Mockup](src/main/resources/static/img/macbook-pro-mockup-with-a-white-iphone-6-in-front-view-a11923.png)
